@@ -5,63 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurviveVR Minecraft Server</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Minecraft', sans-serif;
+            text-align: center;
+            background: url('bg.png') repeat; 
+            color: #ffffff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .logo {
+            margin-bottom: auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .player-count {
+            font-size: 1.5em;
+            margin-top: 1em;
+            color: #f1c40f; 
+        }
+
+        .info, .rules, .link {
+            margin-top: 2em;
+        }
+
+        a {
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #4CAF50; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+    </style>
 </head>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: url('bg.png') repeat;
-    color: #ffffff;
-    padding: 20px;
-    margin: 0;
-}
-
-.container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.logo {
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-.player-count {
-    font-size: 1.5em;
-    margin-top: 1em;
-}
-
-.info, .rules, .link {
-    margin-top: 2em;
-}
-
-a {
-    color: #61dafb;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-</style>
 <body>
     <div class="container">
         <img src="survivevr.png" alt="Server Logo" class="logo">
 
-        <p>IP: mc.survivevr.xyz</p>
+        <p>
+            <strong>IP:</strong>
+            <span id="ip-address">mc.survivevr.xyz</span>
+            <button onclick="copyToClipboard()">Copy IP</button>
+        </p>
         <div class="player-count" id="player-count">
             Loading player count...
         </div>
@@ -93,6 +113,26 @@ a:hover {
                 console.error('Error fetching player count:', error);
                 document.getElementById('player-count').textContent = 'Error loading player count';
             }
+        }
+
+        function copyToClipboard() {
+            // Get the IP address text
+            const ipText = document.getElementById('ip-address').textContent;
+
+            // Create a temporary input element to copy the text
+            const tempInput = document.createElement('input');
+            tempInput.value = ipText;
+            document.body.appendChild(tempInput);
+            
+            // Select the text and copy it
+            tempInput.select();
+            document.execCommand('copy');
+            
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // Provide feedback to the user
+            alert('IP address copied to clipboard!');
         }
 
         fetchPlayerCount();
