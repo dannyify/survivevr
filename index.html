@@ -4,53 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurviveVR Minecraft Server</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('font/MCbold.otf') format('opentype');
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('font/MCbolditalic.otf') format('opentype');
+            font-weight: bold;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('font/MCitalic.otf') format('opentype');
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('font/MCregular.otf') format('opentype');
+            font-weight: normal;
+        }
+
         body {
             font-family: 'Minecraft', sans-serif;
             text-align: center;
-            background: url('bg.png') repeat; 
+            background: url('bg.png') repeat;
             color: #ffffff;
-            padding: 20px;
+            padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .container {
             background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            margin: auto;
         }
 
         .logo {
-            margin-bottom: auto;
+            margin-bottom: 10px;
+            max-width: 100%;
+            height: auto;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-family: 'Minecraft', sans-serif;
+            font-weight: bold;
+            font-size: 2em;
             margin-bottom: 0.5em;
             color: #4CAF50;
         }
 
         p {
-            font-size: 1.2em;
+            font-family: 'Minecraft', sans-serif;
+            font-weight: normal;
+            font-size: 1em;
+            margin: 5px 0;
         }
 
         .player-count {
-            font-size: 1.5em;
-            margin-top: 1em;
-            color: #f1c40f; 
+            font-family: 'Minecraft', sans-serif;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            color: #f1c40f;
         }
 
         .info, .rules, .link {
-            margin-top: 2em;
+            margin-top: 1em;
         }
 
         a {
             color: #61dafb;
             text-decoration: none;
             font-weight: bold;
+            display: block;
+            margin: 5px 0;
         }
 
         a:hover {
@@ -58,10 +97,10 @@
         }
 
         button {
-            background-color: #4CAF50; 
+            background-color: #4CAF50;
             color: #ffffff;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-size: 1em;
             cursor: pointer;
             border-radius: 5px;
@@ -69,13 +108,35 @@
         }
 
         button:hover {
-            background-color: #45a049; 
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p, .player-count {
+                font-size: 0.9em;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="survivevr.png" alt="Server Logo" class="logo">
+        <img src="survivevr.png" alt="Server Logo" class="logo" style="max-width: 80%; height: auto;">
+        <br>
+        <img src="images.jpg" alt="Server Image" style="max-width: 50%; height: auto;">
 
         <p>
             <strong>IP:</strong>
@@ -95,6 +156,9 @@
         <div class="link">
             <a href="https://8kun.top/survivevr/">Board</a>
             <a href="http://mc.survivevr.xyz:8123">Dynmap</a>
+            <a href="https://www.example.com">
+                <img src="discord.webp" alt="Discord" style="max-width: 40%; height: auto;">
+            </a>
         </div>
     </div>
     
@@ -116,22 +180,13 @@
         }
 
         function copyToClipboard() {
-            // Get the IP address text
             const ipText = document.getElementById('ip-address').textContent;
-
-            // Create a temporary input element to copy the text
             const tempInput = document.createElement('input');
             tempInput.value = ipText;
             document.body.appendChild(tempInput);
-            
-            // Select the text and copy it
             tempInput.select();
             document.execCommand('copy');
-            
-            // Remove the temporary input element
             document.body.removeChild(tempInput);
-
-            // Provide feedback to the user
             alert('IP address copied to clipboard!');
         }
 
