@@ -4,139 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurviveVR Minecraft Server</title>
-    <style>
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('font/MCbold.otf') format('opentype');
-            font-weight: bold;
-        }
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('font/MCbolditalic.otf') format('opentype');
-            font-weight: bold;
-            font-style: italic;
-        }
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('font/MCitalic.otf') format('opentype');
-            font-style: italic;
-        }
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('font/MCregular.otf') format('opentype');
-            font-weight: normal;
-        }
-
-        body {
-            font-family: 'Minecraft', sans-serif;
-            text-align: center;
-            background: url('bg.png') repeat;
-            color: #ffffff;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            max-width: 90%;
-            margin: auto;
-        }
-
-        .logo {
-            margin-bottom: 10px;
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1 {
-            font-family: 'Minecraft', sans-serif;
-            font-weight: bold;
-            font-size: 2em;
-            margin-bottom: 0.5em;
-            color: #4CAF50;
-        }
-
-        p {
-            font-family: 'Minecraft', sans-serif;
-            font-weight: normal;
-            font-size: 1em;
-            margin: 5px 0;
-        }
-
-        .player-count {
-            font-family: 'Minecraft', sans-serif;
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 0.5em;
-            color: #f1c40f;
-        }
-
-        .info, .rules, .link {
-            margin-top: 1em;
-        }
-
-        a {
-            color: #61dafb;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin: 5px 0;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: #ffffff;
-            border: none;
-            padding: 8px 16px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        @media screen and (max-width: 600px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            p, .player-count {
-                font-size: 0.9em;
-            }
-
-            button {
-                padding: 6px 12px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <img src="survivevr.png" alt="Server Logo" class="logo" style="max-width: 80%; height: auto;">
+        <img src="survivevr.png" alt="Server Logo" class="logo">
         <br>
-        <img src="images.jpg" alt="Server Image" style="max-width: 50%; height: auto;">
+        <img src="images.jpg" alt="Server Image" class="server-image">
 
         <p>
             <strong>IP:</strong>
@@ -157,7 +31,7 @@
             <a href="https://8kun.top/survivevr/">Board</a>
             <a href="http://mc.survivevr.xyz:8123">Dynmap</a>
             <a href="https://discord.gg/jBgR4RAAJa">
-                <img src="discord.webp" alt="Discord" style="max-width: 40%; height: auto;">
+                <img src="discord.webp" alt="Discord" class="discord-image">
             </a>
         </div>
     </div>
