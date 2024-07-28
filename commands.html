@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .command-section {
+            margin-bottom: 30px;
+        }
+        .command-list {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .command-item {
+            margin: 10px 0;
+        }
+        .command-name {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .tutorial img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Server Commands</h1>
+    <div class="command-section">
+        TYPE /help in-game for all/updated commands
+    </div>
+    
+    <div class="command-section">
+        <h2>/imageframe Commands</h2>
+        <div class="command-list">
+            <div class="command-item">
+                <span class="command-name">/imageframe select</span>
+                <p>Select item frames to put image maps on.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt;</span>
+                <p>Create a new image map.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe create &lt;name&gt; &lt;url&gt; selection</span>
+                <p>Create a new image map and put it directly in your selected item frames.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe refresh [optional:image_name] [optional:new_url]</span>
+                <p>Refresh a map you've created from source URL.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe info</span>
+                <p>Get info related to the image map you are holding.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe get &lt;name&gt;</span>
+                <p>Get a self-created pre-existing image map.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe get &lt;name&gt; selection</span>
+                <p>Put a self-created pre-existing image map directly on your selected item frames.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe delete &lt;name&gt;</span>
+                <p>Delete a self-created pre-existing image map.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe list</span>
+                <p>List all self-created pre-existing image maps.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/imageframe setaccess &lt;name&gt; &lt;player&gt; &lt;permission&gt;</span>
+                <p>Set access permission of other players for your map.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="command-section">
+        <h2>Other Commands</h2>
+        <div class="command-list">
+            <div class="command-item">
+                <span class="command-name">/unstuck</span>
+                <p>Escape from being stuck inside a block.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/hat</span>
+                <p>Takes the item you're holding and puts it on your head.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/back</span>
+                <p>Teleports you back from a warp.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/near</span>
+                <p>Lists players near you or another player.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/msg</span>
+                <p>Private message another player.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/mail</span>
+                <p>Send and receive mail.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/nick</span>
+                <p>Change your or another player's nickname.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/compass</span>
+                <p>Shows current direction.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/warp</span>
+                <p>Show warps or warp to a location.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/me</span>
+                <p>Describes an action.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/afk</span>
+                <p>Marks you afk, can be useful for skipping nights.</p>
+                <div class="command-item">
+                    <span class="command-name">/getpos</span>
+                    <p>Get your coordinates.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="command-section tutorial">
+        <h2>How to Add Map Markers from Signs on Dynmap</h2>
+        <div class="command-list">
+            <p>Place a sign, make sure the first line is <code>[dynmap]</code>, the second line is the name of your marker. You can select an icon by using <code>icon:iconname</code>.</p>
+            <img src="dyn1.png" alt="Example of Dynmap Sign 1">
+            <img src="dyn2.png" alt="Example of Dynmap Sign 2">
+        </div>
+        <h2>How to use and create a chestshop</h2>
+        <div class="command-list">
+            <h3>step 1</h3>
+            <img src="ts1.png">
+            <p>write "[trade]" on the first line of a sign</p>
+            <h3>step 2</h3>
+            <img src="ts2.png">
+            <p>type the command /ts setProduct with your product in hand</p>
+            <img src="ts3.png">
+            <p>use /setCost and specify what you'd like to trade</p>
+            <img src="ts4.png">
+            <img src="ts5.png">
+            <p>users can now tyoe /ts what to see in your shop</p>
+            <p>to buy right click the sign with the cost of the product</p>
+        </div>
+            

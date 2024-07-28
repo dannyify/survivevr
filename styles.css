@@ -114,6 +114,19 @@ button:hover {
     height: auto;
 }
 
+ul {
+    text-align: left;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 1em;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 600px) {
     .container {
         width: 100%;
@@ -131,5 +144,9 @@ button:hover {
     button {
         padding: 6px 12px;
         font-size: 0.8em;
+    }
+
+    ul {
+        font-size: 0.9em;
     }
 }
