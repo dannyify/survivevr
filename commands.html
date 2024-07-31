@@ -61,6 +61,7 @@
         <a href="#imageframe-commands">/imageframe Commands</a>
         <a href="#team-commands">Team Commands</a>
         <a href="#other-commands">Other Commands</a>
+        <a href="#bounty-commands">Bounty Commands</a>
         <a href="#vip-commands">VIP Commands</a>
         <a href="#map-markers">How to Add Map Markers from Signs on Dynmap</a>
         <a href="#chestshop">How to Use and Create a Chestshop</a>
@@ -198,7 +199,6 @@
         </div>
     </div>
 
-
     <div class="command-section" id="other-commands">
         <h2>Other Commands</h2>
         <div class="command-list">
@@ -209,10 +209,6 @@
             <div class="command-item">
                 <span class="command-name">/hat</span>
                 <p>Take the item you're holding and put it on your head.</p>
-            </div>
-            <div class="command-item">
-                <span class="command-name">/back</span>
-                <p>Teleport back from a warp.</p>
             </div>
             <div class="command-item">
                 <span class="command-name">/near</span>
@@ -246,9 +242,27 @@
                 <span class="command-name">/afk</span>
                 <p>Mark yourself as AFK, can be useful for skipping nights.</p>
             </div>
+        </div>
+    </div>
+
+    <div class="command-section" id="bounty-commands">
+        <h2>Bounty Commands</h2>
+        <div class="command-list">
             <div class="command-item">
-                <span class="command-name">/getpos</span>
-                <p>Get your coordinates.</p>
+                <span class="command-name">/bounty list</span>
+                <p>Displays the list of active bounties.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/bounty check &lt;player&gt;</span>
+                <p>Directly displays the bounty on a player.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/bounty raise &lt;player&gt;</span>
+                <p>Raises the bounty for a player by contributing to the player's bounty reward.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/bounty silentraise &lt;player&gt;</span>
+                <p>Raises the bounty for a player, hiding the identity of the benefactor.</p>
             </div>
         </div>
     </div>
@@ -288,10 +302,6 @@
                 <span class="command-name">/invsee &lt;player&gt;</span>
                 <p>See a player's inventory.</p>
             </div>
-            <div class="command-item">
-                <span class="command-name">/getpos &lt;player&gt;</span>
-                <p>Get another player's coordinates.</p>
-            </div>
         </div>
     </div>
 
@@ -320,5 +330,6 @@
             <p>Users can now type /ts what to see in your shop. To buy, right-click the sign with the cost of the product.</p>
         </div>
     </div>
+
 </body>
 </html>
