@@ -17,6 +17,18 @@
             text-align: center;
             color: #2c3e50;
         }
+        .index {
+            margin-bottom: 30px;
+        }
+        .index a {
+            display: block;
+            color: #2980b9;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .index a:hover {
+            text-decoration: underline;
+        }
         .command-section {
             margin-bottom: 30px;
         }
@@ -43,11 +55,18 @@
 <body>
 
     <h1>Server Commands</h1>
-    <div class="command-section">
-        TYPE /help in-game for all/updated commands
+    
+    <div class="index">
+        <h2>Index</h2>
+        <a href="#imageframe-commands">/imageframe Commands</a>
+        <a href="#team-commands">Team Commands</a>
+        <a href="#other-commands">Other Commands</a>
+        <a href="#vip-commands">VIP Commands</a>
+        <a href="#map-markers">How to Add Map Markers from Signs on Dynmap</a>
+        <a href="#chestshop">How to Use and Create a Chestshop</a>
     </div>
     
-    <div class="command-section">
+    <div class="command-section" id="imageframe-commands">
         <h2>/imageframe Commands</h2>
         <div class="command-list">
             <div class="command-item">
@@ -93,7 +112,7 @@
         </div>
     </div>
 
-    <div class="command-section">
+    <div class="command-section" id="team-commands">
         <h2>Team Commands</h2>
         <div class="command-list">
             <div class="command-item">
@@ -179,7 +198,8 @@
         </div>
     </div>
 
-    <div class="command-section">
+
+    <div class="command-section" id="other-commands">
         <h2>Other Commands</h2>
         <div class="command-list">
             <div class="command-item">
@@ -233,13 +253,58 @@
         </div>
     </div>
 
-    <div class="command-section tutorial">
+    <div class="command-section" id="vip-commands">
+        <h2>VIP Commands</h2>
+        <div class="command-list">
+            <div class="command-item">
+                <span class="command-name">/team sethome</span>
+                <p>Sets your team's home.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/team setwarp</span>
+                <p>Sets a warp for your team.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/co inspect</span>
+                <p>Get a log of when a block has been modified.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/back</span>
+                <p>Teleport back to last death.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/gravestonesplus AllGraves</span>
+                <p>Show recent deaths, teleport to them.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/sethome</span>
+                <p>Sets your home.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/home</span>
+                <p>Teleport home.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/invsee &lt;player&gt;</span>
+                <p>See a player's inventory.</p>
+            </div>
+            <div class="command-item">
+                <span class="command-name">/getpos &lt;player&gt;</span>
+                <p>Get another player's coordinates.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="command-section tutorial" id="map-markers">
         <h2>How to Add Map Markers from Signs on Dynmap</h2>
         <div class="command-list">
             <p>Place a sign, make sure the first line is <code>[dynmap]</code>, the second line is the name of your marker. You can select an icon by using <code>icon:iconname</code>.</p>
             <img src="dyn1.png" alt="Example of Dynmap Sign 1">
             <img src="dyn2.png" alt="Example of Dynmap Sign 2">
         </div>
+    </div>
+    
+    <div class="command-section tutorial" id="chestshop">
         <h2>How to Use and Create a Chestshop</h2>
         <div class="command-list">
             <h3>Step 1</h3>
